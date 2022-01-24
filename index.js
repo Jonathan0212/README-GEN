@@ -8,13 +8,13 @@ const questions = () => {
     return inquirer.prompt([
     {
         type: 'input',
-        name: 'name',
-        message: 'What is your project name? (Required)',
-        validate: nameInput => {
-            if (nameInput) {
+        name: 'title',
+        message: 'What is your project title? (Required)',
+        validate: titleInput => {
+            if (titleInput) {
               return true;
              } else {
-              console.log('Please enter your project name!');
+              console.log('Please enter your project title!');
                 return false;
             }
         },
@@ -47,10 +47,10 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'usage',
+        name: 'create',
         message: 'Enter what was used to create your project (Required)',
-        validate: usageInput => {
-          if (usageInput) {
+        validate: createInput => {
+          if (createInput) {
             return true;
           } else {
             console.log('Please enter what you used to create your project!');

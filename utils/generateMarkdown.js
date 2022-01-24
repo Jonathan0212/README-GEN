@@ -41,13 +41,13 @@ function renderLicenseSection(license) {
   }
 }
   // TODO: Create a function to generate markdown for README
-function generateMarkdown(readMeData) {
+function generateMarkdown(data) {
   return `
-# ${readMeData.project}
+# ${data.title}
 
 ## Description
 
-${readMeData.description}
+${data.describe}
 
 
 ## Table of Contents
@@ -60,11 +60,11 @@ ${readMeData.description}
 
 ## Installation
 
-${readMeData.insall}
+${data.install}
 
 ## Languages Used
     
-${readMeData.languages}
+${data.create}
 
 ## Usage
 
@@ -74,13 +74,18 @@ Example Syntax for screenshots ![alt text](assets/images/screenshot.png)
 
 
 ## Credits 
-Made by ${readMeData.name}
+Made by ${data.contribution}
+
+
+## Contact Info
+${data.email}
+${data.userName}
 
 
 ## License 
-${renderLicenseBadge(readMeData.license)}
-${renderLicenseLink(readMeData.license)}
-${renderLicenseSection(readMeData.license)}
+${renderLicenseBadge(data.license)}
+${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
     
 `;
 }
