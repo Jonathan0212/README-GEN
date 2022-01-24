@@ -28,6 +28,7 @@ Provide instructions on how the application is used. Include screenshots
 
 Example Syntax for screenshots ![alt text](assets/images/screenshot.png)
 
+![image](https://user-images.githubusercontent.com/93745345/150719747-f03b7336-ad55-4acc-9155-2bdb06a9e09b.png)
 
 ## Credits 
 Made by Jonathan Martinez
