@@ -2,7 +2,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const generatePage = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -117,20 +116,29 @@ const questions = () => {
         message: 'Choose a license for your project (Required)',
         choices: ['Apache','MIT','Mozilla',]
     }
-]);
+])
+
+.then((answers) => {
+    console.log(generateMarkdown(answers));
+    const userAnswers = generateMarkdown(answers);
+    const fileName = './gen/generatedREADME.md'
+    writeToFile(fileName, userAnswers);
+    })
 };
 
-function start() {
-    return inquirer.prompt(questions);
+const writeToFile = (fileName, data) => {
+    console.log('Inside writeToFile' + 'File name:' + fileName);
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            console.log('The README file has been generated!')
+        }
+    });
 }
 
-start ()
-.then(readMeData => {
-    const pageHTML = generateMarkdown(readMeData);
+function init() {
+    questions();
 
-    fs.writeFile('./README.md', pageHTML, err => {
-        if (err) throw new Error(err);
 
-        console.log('README file has been generated!')
-    });
-});
+};
+
+init();
