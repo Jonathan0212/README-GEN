@@ -2,13 +2,13 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license == 'Apache') {
-    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)(https://opensource.org/licenses/Apache-2.0)"
   }
   if (license == 'MIT') {
-    return "![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)"
+    return "![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)(https://opensource.org/licenses/MIT)"
   }
   if (license == 'Mozilla') {
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)(https://opensource.org/licenses/MPL-2.0)"
   }
 }
 
@@ -52,10 +52,10 @@ ${data.describe}
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](usage)
-* [Credits](credits)
-* [License](license)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Credits](#Credits)
+* [License](#License)
 
 
 ## Installation
@@ -78,8 +78,8 @@ Made by ${data.contribution}
 
 
 ## Contact Info
-${data.email}
-${data.userName}
+* 🏆 ${data.email}
+* 🏆 [Github Profile](https://github.com/${data.userName})
 
 
 ## License 
